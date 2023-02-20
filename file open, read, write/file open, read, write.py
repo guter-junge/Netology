@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 
 with open('recipes.txt', 'rt', encoding='utf-8') as f:
     cook_book = {}
@@ -37,36 +37,25 @@ def get_shop_list_by_dishes(dishes, person_count):
                     shopping_list[name] = sub_dict
     print(shopping_list)
 
-get_shop_list_by_dishes(['Фахитос', 'Омлет'], 2)
+# get_shop_list_by_dishes(['Фахитос', 'Омлет'], 2)
 
 
 with open('1.txt', 'r') as f, open('2.txt', 'r') as d, open ('3.txt', 'r') as a, open('4.txt', 'w+') as s:
-    main_list = []
 
-    res = f.readlines()
-    res_len = str(len(res))
-    res_name = '1.txt'
-    res.insert(0, res_name)
-    res.insert(1, res_len)
+    main_list = [f, d, a]
+    main_dict = {}
+    for file in main_list:
+        res = file.readlines()
+        main_dict[file.name] = [str(len(res)), *res]
 
-    res_2 = d.readlines()
-    res_2_len = str(len(res_2))
-    res_2_name = '2.txt'
-    res_2.insert(0, res_2_name)
-    res_2.insert(1, res_2_len)
+    sorted_list = sorted(main_dict.items(), key=lambda x:x[1][1], reverse=True)
 
-    res_3 = a.readlines()
-    res_3_len = str(len(res_3))
-    res_3_name = '3.txt'
-    res_3.insert(0, res_3_name)
-    res_3.insert(1, res_3_len)
+    for file in sorted_list:
+            for line in file:
+                if isinstance(line, str):
+                    s.write(line+'\n')
+                if isinstance(line, list):
+                    for element in line:
+                        s.write(element+'\n')
 
-    main_list.append(res)
-    main_list.append(res_2)
-    main_list.append(res_3)
-    main_list.sort(key=len)
-
-    for element in main_list:
-        for line in element:
-            s.write(line+'\n')
 
