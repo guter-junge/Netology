@@ -4,7 +4,6 @@ import json
 import time
 from tqdm import tqdm
 
-
 vk_token = 'vk_token'
 ya_token = input('Введите токен с полигона Я.диска: ')
 version = '5.131'
