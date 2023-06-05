@@ -164,7 +164,7 @@ def find_client(cur, value):
         print('Error finding a client: ', str(e))
 
 if __name__ == '__main__':
-    with psycopg2.connect(database='personal_info', user='postgres', password='Ulik2054768') as conn:
+    with psycopg2.connect(database='personal_info', user='postgres', password=password) as conn:
         conn.autocommit = True
         cur = conn.cursor()
         print('1 = create database, 2 = create tables, \n'
