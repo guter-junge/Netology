@@ -1,0 +1,16 @@
+Function name - summator,
+Date and time - 2023-09-18 15:57:07.028335,
+Arguments - (2, 2) and {},
+Result - 4 
+Function name - div,
+Date and time - 2023-09-18 15:57:07.028335,
+Arguments - (6, 2) and {},
+Result - 3.0 
+Function name - summator,
+Date and time - 2023-09-18 15:57:07.028335,
+Arguments - (4.3,) and {'b': 2.2},
+Result - 6.5 
+Function name - summator,
+Date and time - 2023-09-18 15:57:07.028335,
+Arguments - () and {'a': 0, 'b': 0},
+Result - 0 
