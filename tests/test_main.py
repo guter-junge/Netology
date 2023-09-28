@@ -123,7 +123,7 @@ class Test_functions:
 
     @pytest.mark.parametrize('ya_token, disk_folder, expected', [
         (
-            'y0_AgAAAAAgO2y6AADLWwAAAADdgCSvmx_rvQV7TBqikyfdY1xEzTnoRiU',
+            '',
             '/Test_folder/',
             ('Folder successfully created', 'Folder exists')
         )
