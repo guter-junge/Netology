@@ -95,6 +95,6 @@ def check_folder_creation(ya_token, disk_folder):
 
 
 if __name__ == '__main__':
-    ya_token = 'y0_AgAAAAAgO2y6AADLWwAAAADdgCSvmx_rvQV7TBqikyfdY1xEzTnoRiU'
+    ya_token = ''
     disk_folder = '/Test_folder/'
     check_folder_creation(ya_token, disk_folder)
